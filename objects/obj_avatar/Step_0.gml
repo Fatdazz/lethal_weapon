@@ -13,4 +13,9 @@ if(instance_position(dirX,dirY,obj_avatar)!=noone || instance_position(dirX,dirY
 }
 
 direction = point_direction(x,y,dirX,dirY);
-speed = 0.5;
+if(obj_zoneAvatar.speed < 5) {
+	speed = 10- (obj_zoneAvatar.speed);
+}
+else {
+	speed = 2;
+}
