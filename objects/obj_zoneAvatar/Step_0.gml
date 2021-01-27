@@ -12,38 +12,38 @@ if(keyboard_check_pressed(ord("J"))) show_debug_message("salut");
 
 if(keyboard_check_pressed(ord("U")) && !keyboard_check_pressed(ord("I")) && bCheckUp){
 	bCheckUp = ! bCheckUp;
-	vspeed -= 0.1;
+	vspeed -= speed_variation;
 	//show_debug_message("T !Y");
 }
 if(!keyboard_check_pressed(ord("U")) && keyboard_check_pressed(ord("I")) && !bCheckUp){
 	bCheckUp = ! bCheckUp;
-	vspeed -= 0.1;
+	vspeed -= speed_variation;
 	//show_debug_message("!T Y");
 }
 if(keyboard_check_pressed(ord("K")) && !keyboard_check_pressed(ord("L")) && bCheckRight){
 	bCheckRight = ! bCheckRight;
-	hspeed += 0.1;
+	hspeed += speed_variation;
 }
 if(!keyboard_check_pressed(ord("K")) && keyboard_check_pressed(ord("L")) && !bCheckRight){
 	bCheckRight = ! bCheckRight;
-	hspeed += 0.1;
+	hspeed += speed_variation;
 }
 if(keyboard_check_pressed(ord("N")) && !keyboard_check_pressed(ord("M")) && bCheckDown){
 	bCheckDown = ! bCheckDown;
-	vspeed += 0.1;
+	vspeed += speed_variation;
 }
 if(!keyboard_check_pressed(ord("N")) && keyboard_check_pressed(ord("M")) && !bCheckDown){
 	bCheckDown = ! bCheckDown;
-	vspeed += 0.1;
+	vspeed += speed_variation;
 }
 
 if(keyboard_check_pressed(ord("G")) && !keyboard_check_pressed(ord("H")) && bCheckLeft){
 	bCheckLeft = ! bCheckLeft;
-	hspeed -= 0.1;
+	hspeed -= speed_variation;
 }
 if(!keyboard_check_pressed(ord("G")) && keyboard_check_pressed(ord("H")) && !bCheckLeft){
 	bCheckLeft = ! bCheckLeft;
-	hspeed -= 0.1;
+	hspeed -= speed_variation;
 }
 
 // modification de la zone avatar avec la vitesse et de la vitesse de l'avatar
