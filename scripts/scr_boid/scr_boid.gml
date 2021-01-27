@@ -52,7 +52,7 @@ boid = function(_objType) constructor{
 			var dy = oboid.y - y;
 			var d = abs(dx) + abs(dy);
 			
-			if(d < 1e-7) continue;
+			if(d < 10^-7) continue;
 			
 			if (d < separatedist) {
 			countsep++;
