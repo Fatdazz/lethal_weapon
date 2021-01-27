@@ -26,6 +26,12 @@ boid = function(_objType) constructor{
 	ax = 0;
 	ay = 0;
 	objType = _objType;
+	cohesion = 0;
+	align = 0;
+	separate = 0;
+	separatedist = 0;
+	cohesiondist = 0;
+	aligndist = 0;
 	static update = function(amount){
 		ax = 0;
 		ay = 0;
@@ -103,8 +109,9 @@ boid = function(_objType) constructor{
 		}
 		vec[0] *= amount;
 		vec[1] *= amount;
-			
-			
+		ax += vec[0];
+		ay += vec[1];
+		
 	}
 
 }
