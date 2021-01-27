@@ -1,7 +1,7 @@
 // Les actifs du script ont changé pour v2.3.0 Voir
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 pour plus d’informations
 
-steer = function(target, amount){
+function steer(target, amount){
 	var dir =[ target[0] - x ,target[1] - y];
 	var d = abs(dir[0]) + abs(dir[1]);
 	if (d > 2) {
@@ -22,17 +22,19 @@ steer = function(target, amount){
 
 }
 
-boid = function(_objType) constructor{
+function boid(_this) constructor{
+	this = _this;
 	ax = 0;
 	ay = 0;
-	objType = _objType;
+	objType = this.object_index;
 	cohesion = 0;
 	align = 0;
 	separate = 0;
 	separatedist = 0;
 	cohesiondist = 0;
 	aligndist = 0;
-	static update = function(amount){
+	update = function(amount){
+		
 		ax = 0;
 		ay = 0;
 		var vec = [0,0];
@@ -40,7 +42,7 @@ boid = function(_objType) constructor{
 		var valAli = [0,0];
 		var valCoh = [0,0];
 		
-		var  countsep  = 0;
+		var countsep  = 0;
 		var countali = 0;
 		var countcoh = 0;
 		var invD = 0;
@@ -48,11 +50,11 @@ boid = function(_objType) constructor{
 		
 		for(var i = 0; i < nbBoids ; i++){
 			var oboid = instance_find(objType,i);
-			var dx = oboid.x - x;
-			var dy = oboid.y - y;
+			var dx = oboid.x - this.x;
+			var dy = oboid.y - this.y;
 			var d = abs(dx) + abs(dy);
 			
-			if(d < 1e-7) continue;
+			if(d < 1^-7) continue;
 			
 			if (d < separatedist) {
 			countsep++;
@@ -84,7 +86,7 @@ boid = function(_objType) constructor{
 			}
 			
 		if (countali > 0) {
-			// final float invForAli = 1f / (float) countali;
+			// final  var invForAli = 1f / countali;
 			var  invForAli = align / countali;
 			ali[0] *= invForAli;
 			ali[1] *= invForAli;

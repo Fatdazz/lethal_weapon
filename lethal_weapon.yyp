@@ -5,6 +5,7 @@
     {"id":{"name":"scr_boid","path":"scripts/scr_boid/scr_boid.yy",},"order":0,},
     {"id":{"name":"obj_boid","path":"objects/obj_boid/obj_boid.yy",},"order":2,},
     {"id":{"name":"spr_avatar","path":"sprites/spr_avatar/spr_avatar.yy",},"order":0,},
+    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":16,},
     {"id":{"name":"spr_zoneAvatar","path":"sprites/spr_zoneAvatar/spr_zoneAvatar.yy",},"order":15,},
     {"id":{"name":"Pièce1","path":"rooms/Pièce1/Pièce1.yy",},"order":0,},
   ],
