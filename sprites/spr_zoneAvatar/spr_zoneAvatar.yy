@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"470a52a3-2e93-4d53-9909-2b8d23fd8598","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "lethal_weapon",
-    "path": "lethal_weapon.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_zoneAvatar",
